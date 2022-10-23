@@ -8,7 +8,7 @@ function GetErrorMessage(ErrorCode: Integer): String;
 
 implementation
 
-{$IFDEF Linux}
+{$IFDEF Unix}//Linux}
 uses SysUtils, Errors;
 {$ENDIF}
 
@@ -16,7 +16,7 @@ uses SysUtils, Errors;
 uses SysUtils, Windows;
 {$ENDIF}
 
-{$IFDEF Linux}
+{$IFDEF Unix}//Linux}
 function GetErrorMessage(ErrorCode: Integer): String;
 begin
   Result := StrError(ErrorCode);
